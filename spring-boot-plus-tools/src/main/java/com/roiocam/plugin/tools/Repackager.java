@@ -417,6 +417,9 @@ public class Repackager {
 				if (isZip(library.getFile())) {
 					String libraryDestination = Repackager.this.layout.getLibraryDestination(library.getName(),
 							library.getScope());
+					if (library.getScope().equals(LibraryScope.CUSTOM)) {
+						libraryDestination = "BOOT-INF/ext/";
+					}
 					if (libraryDestination != null) {
 						Library existing = this.libraryEntryNames.putIfAbsent(libraryDestination + library.getName(),
 								library);
