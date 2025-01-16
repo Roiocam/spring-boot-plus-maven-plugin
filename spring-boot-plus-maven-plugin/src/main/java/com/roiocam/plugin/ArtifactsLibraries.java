@@ -19,10 +19,10 @@ package com.roiocam.plugin;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.plugin.logging.Log;
-import org.springframework.boot.loader.tools.Libraries;
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCallback;
-import org.springframework.boot.loader.tools.LibraryScope;
+import com.roiocam.plugin.tools.Libraries;
+import com.roiocam.plugin.tools.Library;
+import com.roiocam.plugin.tools.LibraryCallback;
+import com.roiocam.plugin.tools.LibraryScope;
 
 import java.io.IOException;
 import java.util.*;

@@ -38,17 +38,17 @@ import org.apache.maven.project.MavenProjectHelper;
 import org.apache.maven.shared.artifact.filter.collection.ArtifactsFilter;
 import org.apache.maven.shared.artifact.filter.collection.ScopeFilter;
 
-import org.springframework.boot.loader.tools.DefaultLaunchScript;
-import org.springframework.boot.loader.tools.LaunchScript;
-import org.springframework.boot.loader.tools.Layout;
-import org.springframework.boot.loader.tools.LayoutFactory;
-import org.springframework.boot.loader.tools.Layouts.Expanded;
-import org.springframework.boot.loader.tools.Layouts.Jar;
-import org.springframework.boot.loader.tools.Layouts.None;
-import org.springframework.boot.loader.tools.Layouts.War;
-import org.springframework.boot.loader.tools.Libraries;
-import org.springframework.boot.loader.tools.Repackager;
-import org.springframework.boot.loader.tools.Repackager.MainClassTimeoutWarningListener;
+import com.roiocam.plugin.tools.DefaultLaunchScript;
+import com.roiocam.plugin.tools.LaunchScript;
+import com.roiocam.plugin.tools.Layout;
+import com.roiocam.plugin.tools.LayoutFactory;
+import com.roiocam.plugin.tools.Layouts.Expanded;
+import com.roiocam.plugin.tools.Layouts.Jar;
+import com.roiocam.plugin.tools.Layouts.None;
+import com.roiocam.plugin.tools.Layouts.War;
+import com.roiocam.plugin.tools.Libraries;
+import com.roiocam.plugin.tools.Repackager;
+import com.roiocam.plugin.tools.Repackager.MainClassTimeoutWarningListener;
 
 /**
  * Repackages existing JAR and WAR archives so that they can be executed from the command
