@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
+import com.roiocam.plugin.tools.LibraryScope;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -80,6 +81,11 @@ public abstract class AbstractDependencyFilterMojo extends AbstractMojo {
         try {
             Set<Artifact> filtered = new LinkedHashSet<>(dependencies);
             filtered.retainAll(filters.filter(dependencies));
+            for (Artifact dependency : dependencies) {
+                if (dependency.getScope().equals(LibraryScope.CUSTOM.toString())) {
+                    filtered.add(dependency);
+                }
+            }
             return filtered;
         }
         catch (ArtifactFilterException ex) {
